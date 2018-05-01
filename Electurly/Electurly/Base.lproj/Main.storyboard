@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="M3H-Su-DeB">
             <objects>
-                <viewController id="6DJ-66-wKH" sceneMemberID="viewController">
+                <viewController id="6DJ-66-wKH" customClass="HomeViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQ4-uA-LIZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-748" y="-24"/>
         </scene>
-        <!--View Controller-->
+        <!--Func Select View Controller-->
         <scene sceneID="PEC-P7-cgE">
             <objects>
-                <viewController id="Q9j-Oj-r2t" sceneMemberID="viewController">
+                <viewController id="Q9j-Oj-r2t" customClass="FuncSelectViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RBc-yW-wDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="-15.199999999999999" y="-23.838080959520241"/>
         </scene>
-        <!--View Controller-->
+        <!--Rec Select View Controller-->
         <scene sceneID="Gog-48-46D">
             <objects>
-                <viewController id="i7M-ZO-B4Y" sceneMemberID="viewController">
+                <viewController id="i7M-ZO-B4Y" customClass="RecSelectViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XoW-Bc-df5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="698" y="-24"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="DYH-0G-VSJ">
             <objects>
-                <viewController id="h8L-Jx-0MU" sceneMemberID="viewController">
+                <viewController id="h8L-Jx-0MU" customClass="VideoViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3i-FH-zCn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1518" y="319"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Folder Select View Controller-->
         <scene sceneID="HrC-cd-Uzz">
             <objects>
-                <tableViewController id="NGw-9C-RsM" sceneMemberID="viewController">
+                <tableViewController id="NGw-9C-RsM" customClass="FolderSelectViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hpt-fW-Ykh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="-497" y="754"/>
         </scene>
-        <!--Table View Controller-->
+        <!--File Select View Controller-->
         <scene sceneID="4T6-SY-NR0">
             <objects>
-                <tableViewController id="Rp1-ND-Zdb" sceneMemberID="viewController">
+                <tableViewController id="Rp1-ND-Zdb" customClass="FileSelectViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IFE-Fh-Lr9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="396" y="755"/>
         </scene>
-        <!--View Controller-->
+        <!--Audio View Controller-->
         <scene sceneID="hYC-ji-8WA">
             <objects>
-                <viewController id="c61-M3-k6m" sceneMemberID="viewController">
+                <viewController id="c61-M3-k6m" customClass="AudioViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qYR-Pd-ivF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
