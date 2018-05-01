@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34942098F8E000240CF7 /* AppDelegate.swift */; };
-		CC8B34972098F8E000240CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34962098F8E000240CF7 /* ViewController.swift */; };
 		CC8B349A2098F8E000240CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8B34982098F8E000240CF7 /* Main.storyboard */; };
 		CC8B349C2098F8E100240CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8B349B2098F8E100240CF7 /* Assets.xcassets */; };
 		CC8B349F2098F8E100240CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8B349D2098F8E100240CF7 /* LaunchScreen.storyboard */; };
+		CC8B34A72099069F00240CF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34A62099069F00240CF7 /* HomeViewController.swift */; };
+		CC8B34A92099071900240CF7 /* FuncSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34A82099071900240CF7 /* FuncSelectViewController.swift */; };
+		CC8B34AB2099073C00240CF7 /* RecSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34AA2099073C00240CF7 /* RecSelectViewController.swift */; };
+		CC8B34AD2099078500240CF7 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34AC2099078500240CF7 /* AudioViewController.swift */; };
+		CC8B34AF2099079800240CF7 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34AE2099079800240CF7 /* VideoViewController.swift */; };
+		CC8B34B1209907AE00240CF7 /* FileSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */; };
+		CC8B34B3209907C900240CF7 /* FolderSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC8B34912098F8E000240CF7 /* Electurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electurly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8B34942098F8E000240CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC8B34962098F8E000240CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC8B34992098F8E000240CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC8B349B2098F8E100240CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC8B349E2098F8E100240CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC8B34A02098F8E100240CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8B34A62099069F00240CF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CC8B34A82099071900240CF7 /* FuncSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncSelectViewController.swift; sourceTree = "<group>"; };
+		CC8B34AA2099073C00240CF7 /* RecSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecSelectViewController.swift; sourceTree = "<group>"; };
+		CC8B34AC2099078500240CF7 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		CC8B34AE2099079800240CF7 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectViewController.swift; sourceTree = "<group>"; };
+		CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				CC8B34942098F8E000240CF7 /* AppDelegate.swift */,
-				CC8B34962098F8E000240CF7 /* ViewController.swift */,
+				CC8B34A62099069F00240CF7 /* HomeViewController.swift */,
 				CC8B34982098F8E000240CF7 /* Main.storyboard */,
+				CC8B34AC2099078500240CF7 /* AudioViewController.swift */,
+				CC8B34AE2099079800240CF7 /* VideoViewController.swift */,
+				CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */,
+				CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */,
+				CC8B34AA2099073C00240CF7 /* RecSelectViewController.swift */,
 				CC8B349B2098F8E100240CF7 /* Assets.xcassets */,
 				CC8B349D2098F8E100240CF7 /* LaunchScreen.storyboard */,
 				CC8B34A02098F8E100240CF7 /* Info.plist */,
+				CC8B34A82099071900240CF7 /* FuncSelectViewController.swift */,
 			);
 			path = Electurly;
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8B34972098F8E000240CF7 /* ViewController.swift in Sources */,
+				CC8B34B1209907AE00240CF7 /* FileSelectViewController.swift in Sources */,
+				CC8B34A92099071900240CF7 /* FuncSelectViewController.swift in Sources */,
+				CC8B34AF2099079800240CF7 /* VideoViewController.swift in Sources */,
 				CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */,
+				CC8B34A72099069F00240CF7 /* HomeViewController.swift in Sources */,
+				CC8B34AB2099073C00240CF7 /* RecSelectViewController.swift in Sources */,
+				CC8B34B3209907C900240CF7 /* FolderSelectViewController.swift in Sources */,
+				CC8B34AD2099078500240CF7 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
