@@ -37,14 +37,12 @@ class FileSelectViewController: UITableViewController {
         let dirPaths = fileManager.urls(for: .documentDirectory,
                                         in: .userDomainMask)
         
-        print(dirPaths[0].absoluteString)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         var audioArray = [String]()
         var videoArray = [String]()
         
         for url in dirPaths {
-            print(url.absoluteString)
             let str_url = url.absoluteString
             if str_url.count > 4 {
                 if str_url.suffix(4) == ".caf" {
@@ -56,7 +54,7 @@ class FileSelectViewController: UITableViewController {
         }
         
         for file in audioArray {
-            cell.textLabel!.text = file
+            cell.textLabel?.text = file
         }
         for file in videoArray {
             cell.textLabel!.text = file
