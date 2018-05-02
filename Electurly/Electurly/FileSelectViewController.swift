@@ -12,6 +12,13 @@ class FileSelectViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reloadTableViewContent()
+    }
+    
+    func reloadTableViewContent()
+    {
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,27 +44,44 @@ class FileSelectViewController: UITableViewController {
         let dirPaths = fileManager.urls(for: .documentDirectory,
                                         in: .userDomainMask)
         
+        //Document directory URL.
+        let docDirect = dirPaths[0]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        var audioArray = [String]()
-        var videoArray = [String]()
-        
-        for url in dirPaths {
-            let str_url = url.absoluteString
-            if str_url.count > 4 {
-                if str_url.suffix(4) == ".caf" {
-                    audioArray.append(getFileName(str_url))
-                } else if str_url.suffix(4) == ".mp4" {
-                    videoArray.append(getFileName(str_url))
+        do {
+            
+            let fileURLs = try fileManager.contentsOfDirectory(at: docDirect, includingPropertiesForKeys: nil)
+ 
+            var audioArray = [String]()
+            var videoArray = [String]()
+            
+            for url in fileURLs {
+                let str_url = url.absoluteString
+                
+                if str_url.count > 5 {
+                    if str_url.suffix(5) == ".caf/" {
+                        audioArray.append(getFileName(str_url))
+                    } else if str_url.suffix(5) == ".mp4/" {
+                        videoArray.append(getFileName(str_url))
+                    }
                 }
             }
-        }
-        
-        for file in audioArray {
-            cell.textLabel?.text = file
-        }
-        for file in videoArray {
-            cell.textLabel!.text = file
+            
+            for file in audioArray {
+                cell.textLabel!.text = file
+            }
+            for file in videoArray {
+                cell.textLabel!.text = file
+            }
+            
+            print("LENGTH OF AUDIO ARRAY: " + String(audioArray.count))
+            
+            
+            print("LENGTH OF VIDEO ARRAY: " + String(videoArray.count))
+
+        } catch {
+            print("\(error.localizedDescription)")
         }
         
         return cell

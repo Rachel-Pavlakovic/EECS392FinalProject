@@ -30,6 +30,8 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         let dirPaths = fileManager.urls(for: .documentDirectory,
             in: .userDomainMask)
         let soundFileURL = dirPaths[0].appendingPathExtension(selectedFileName! + ".caf")
+        
+        print(soundFileURL.absoluteString + "<--FROM AVC")
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
              AVEncoderBitRateKey: 16,
@@ -90,6 +92,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         
         if audioRecorder?.isRecording == true {
             audioRecorder?.stop()
+            
         } else {
             audioPlayer?.stop()
         }
