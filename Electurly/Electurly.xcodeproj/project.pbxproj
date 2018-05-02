@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3E13D42099FB4D004E3336 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3E13D32099FB4D004E3336 /* AVFoundation.framework */; };
 		CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34942098F8E000240CF7 /* AppDelegate.swift */; };
 		CC8B349A2098F8E000240CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8B34982098F8E000240CF7 /* Main.storyboard */; };
 		CC8B349C2098F8E100240CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8B349B2098F8E100240CF7 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3E13D32099FB4D004E3336 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CC8B34912098F8E000240CF7 /* Electurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electurly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8B34942098F8E000240CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8B34992098F8E000240CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3E13D42099FB4D004E3336 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3E13D22099FB4D004E3336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC3E13D32099FB4D004E3336 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC8B34882098F8E000240CF7 = {
 			isa = PBXGroup;
 			children = (
 				CC8B34932098F8E000240CF7 /* Electurly */,
 				CC8B34922098F8E000240CF7 /* Products */,
+				CC3E13D22099FB4D004E3336 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
