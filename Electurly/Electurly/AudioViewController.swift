@@ -13,7 +13,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
@@ -24,7 +23,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         super.viewDidLoad()
         stopButton.isEnabled = false
         playButton.isEnabled = false
-        resetButton.isEnabled = false
         saveButton.isEnabled = false
         
         let fileManager = FileManager.default
@@ -87,6 +85,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         stopButton.isEnabled = false
         playButton.isEnabled = true
         recordButton.isEnabled = true
+        saveButton.isEnabled = true
         
         if audioRecorder?.isRecording == true {
             audioRecorder?.stop()
@@ -109,9 +108,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
                 print("audioPlayer error: \(error.localizedDescription)")
             }
         }
-    }
-    
-    @IBAction func resetAudio(_ sender: UIButton) {
     }
     
     @IBAction func saveAudio(_ sender: UIButton) {

@@ -149,18 +149,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGR-au-N1U">
-                                <rect key="frame" x="185" y="419" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset"/>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-ny-Ret">
                                 <rect key="frame" x="285" y="419" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v21-hO-Q3u">
-                                <rect key="frame" x="189" y="463" width="30" height="30"/>
+                                <rect key="frame" x="189" y="419" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                             </button>
@@ -172,6 +167,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zak-yD-Kzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1518" y="319"/>
+        </scene>
+        <!--Save Video View Controller-->
+        <scene sceneID="Cgf-me-YxJ">
+            <objects>
+                <viewController id="nbQ-ib-zNA" customClass="SaveVideoViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWD-0m-BQz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please name your file:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYG-ls-onn">
+                                <rect key="frame" x="50" y="161" width="315" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-iz-qkH">
+                                <rect key="frame" x="104" y="217" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aze-Ha-0HI">
+                                <rect key="frame" x="147" y="271" width="120" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34765776339999999" green="0.77103319609999998" blue="0.97697890229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6DJ-66-wKH" kind="show" id="N0L-xP-ngA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ek5-YK-Ncn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAT-zK-Emt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="319"/>
         </scene>
         <!--Folder Select View Controller-->
         <scene sceneID="HrC-cd-Uzz">
@@ -211,7 +249,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gec-9c-32U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="754"/>
+            <point key="canvasLocation" x="-749" y="755"/>
         </scene>
         <!--File Select View Controller-->
         <scene sceneID="4T6-SY-NR0">
@@ -245,6 +283,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="z9V-N4-j6d" kind="show" id="iWf-Mp-fmd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -255,7 +296,33 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeC-zY-r7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="755"/>
+            <point key="canvasLocation" x="-16" y="755"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="ibW-8c-kjl">
+            <objects>
+                <viewController id="z9V-N4-j6d" customClass="PlayViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dhy-B8-SvA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPe-Q1-ZaH">
+                                <rect key="frame" x="147" y="330" width="120" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34765776339999999" green="0.77103319609999998" blue="0.97697890229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="k72-Zy-mWc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJL-PA-dtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="755"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="hYC-ji-8WA">
@@ -283,24 +350,17 @@
                                     <action selector="stopAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="zkH-Ox-ajI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-Qi-A35">
-                                <rect key="frame" x="185" y="363" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="UDm-Nd-6BR"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riK-Md-DX1">
                                 <rect key="frame" x="285" y="363" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="BIr-o0-dyD"/>
+                                    <segue destination="dgv-TD-urI" kind="show" id="Q3g-mt-FkF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jk-yq-5UP">
-                                <rect key="frame" x="189" y="401" width="30" height="30"/>
+                                <rect key="frame" x="192" y="363" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
@@ -314,7 +374,6 @@
                     <connections>
                         <outlet property="playButton" destination="3Jk-yq-5UP" id="soV-dY-Hms"/>
                         <outlet property="recordButton" destination="BLZ-4C-Uxg" id="i8W-7V-Zcg"/>
-                        <outlet property="resetButton" destination="9gZ-Qi-A35" id="uI0-4c-vg7"/>
                         <outlet property="saveButton" destination="riK-Md-DX1" id="wa0-ON-k7J"/>
                         <outlet property="stopButton" destination="CTY-4d-YiX" id="m9q-OO-hy2"/>
                     </connections>
@@ -322,6 +381,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1us-MS-7Fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1518" y="-351"/>
+        </scene>
+        <!--Save Audio View Controller-->
+        <scene sceneID="ndh-Zm-Gel">
+            <objects>
+                <viewController id="dgv-TD-urI" customClass="SaveAudioViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="da7-w2-11u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please name your file:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-57-RUj">
+                                <rect key="frame" x="50" y="206" width="315" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxq-T9-pSm">
+                                <rect key="frame" x="104" y="262" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eu-X9-Qhl">
+                                <rect key="frame" x="147" y="316" width="120" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34765776339999999" green="0.77103319609999998" blue="0.97697890229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFile:" destination="dgv-TD-urI" eventType="touchUpInside" id="3v9-Ev-iiq"/>
+                                    <segue destination="6DJ-66-wKH" kind="show" id="I4j-sY-MCT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="T1c-dX-xFb"/>
+                    </view>
+                    <connections>
+                        <outlet property="fileName" destination="Wxq-T9-pSm" id="I8A-fr-igb"/>
+                        <outlet property="saveButton" destination="0eu-X9-Qhl" id="ncd-mL-I7A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWl-ec-6uM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317" y="-351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CSs-Kp-Zny">
@@ -342,4 +449,7 @@
             <point key="canvasLocation" x="-1687.2" y="-22.03898050974513"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I4j-sY-MCT"/>
+    </inferredMetricsTieBreakers>
 </document>
