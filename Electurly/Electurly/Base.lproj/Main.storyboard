@@ -275,7 +275,7 @@
                                     <action selector="recordAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="iK7-Mj-6Op"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-4d-YiX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-4d-YiX">
                                 <rect key="frame" x="96" y="363" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
@@ -283,7 +283,7 @@
                                     <action selector="stopAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="zkH-Ox-ajI"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-Qi-A35">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-Qi-A35">
                                 <rect key="frame" x="185" y="363" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
@@ -291,7 +291,7 @@
                                     <action selector="resetAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="UDm-Nd-6BR"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riK-Md-DX1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riK-Md-DX1">
                                 <rect key="frame" x="285" y="363" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
@@ -313,7 +313,7 @@
                     </view>
                     <connections>
                         <outlet property="playButton" destination="3Jk-yq-5UP" id="soV-dY-Hms"/>
-                        <outlet property="recordPauseButton" destination="BLZ-4C-Uxg" id="hvl-V3-kiZ"/>
+                        <outlet property="recordButton" destination="BLZ-4C-Uxg" id="i8W-7V-Zcg"/>
                         <outlet property="resetButton" destination="9gZ-Qi-A35" id="uI0-4c-vg7"/>
                         <outlet property="saveButton" destination="riK-Md-DX1" id="wa0-ON-k7J"/>
                         <outlet property="stopButton" destination="CTY-4d-YiX" id="m9q-OO-hy2"/>
