@@ -417,7 +417,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveFile:" destination="dgv-TD-urI" eventType="touchUpInside" id="3v9-Ev-iiq"/>
-                                    <segue destination="c61-M3-k6m" kind="show" id="cak-ri-ET1"/>
+                                    <segue destination="c61-M3-k6m" kind="show" identifier="transferNameAudio" id="cak-ri-ET1"/>
                                 </connections>
                             </button>
                         </subviews>
