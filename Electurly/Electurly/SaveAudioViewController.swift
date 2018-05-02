@@ -27,4 +27,20 @@ class SaveAudioViewController: UIViewController {
     @IBAction func saveFile(_ sender: UIButton) {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "transferNameAudio" {
+            let controller = segue.destination as! AudioViewController
+            if fileName.hasText {
+                controller.selectedFileName = fileName.text
+            } else {
+                let date = Date()
+                let calender = Calendar.current
+                let day = calender.component(.day, from: date)
+                let month = calender.component(.month, from: date)
+                let year = calender.component(.year, from: date)
+                controller.selectedFileName = String(month) + "_" + String(day) + "_" + String(year)
+            }
+        }
+    }
+    
 }

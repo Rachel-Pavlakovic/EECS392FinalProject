@@ -76,7 +76,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NGw-9C-RsM" kind="show" id="9Ru-8C-KbO"/>
+                                    <segue destination="Rp1-ND-Zdb" kind="show" id="aY5-A1-ZrZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,46 +214,6 @@
             </objects>
             <point key="canvasLocation" x="1516" y="368"/>
         </scene>
-        <!--Folder Select View Controller-->
-        <scene sceneID="HrC-cd-Uzz">
-            <objects>
-                <tableViewController id="NGw-9C-RsM" customClass="FolderSelectViewController" customModule="Electurly" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hpt-fW-Ykh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JFi-eU-vqn" style="IBUITableViewCellStyleDefault" id="AdP-u0-UZe">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AdP-u0-UZe" id="qhi-lg-Jgh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JFi-eU-vqn">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Rp1-ND-Zdb" kind="show" id="goz-Ll-M6C"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="NGw-9C-RsM" id="pGM-An-Z3g"/>
-                            <outlet property="delegate" destination="NGw-9C-RsM" id="nMv-mT-rab"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gec-9c-32U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-749" y="755"/>
-        </scene>
         <!--File Select View Controller-->
         <scene sceneID="4T6-SY-NR0">
             <objects>
@@ -263,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dMF-AA-cgg" detailTextLabel="1vG-vZ-0WQ" style="IBUITableViewCellStyleValue1" id="FBS-ls-WWb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="dMF-AA-cgg" style="IBUITableViewCellStyleDefault" id="FBS-ls-WWb">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FBS-ls-WWb" id="tpf-9R-sNh">
@@ -271,14 +231,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dMF-AA-cgg">
-                                            <rect key="frame" x="20.000000000000004" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1vG-vZ-0WQ">
-                                            <rect key="frame" x="350" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -417,7 +370,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveFile:" destination="dgv-TD-urI" eventType="touchUpInside" id="3v9-Ev-iiq"/>
-                                    <segue destination="c61-M3-k6m" kind="show" id="cak-ri-ET1"/>
+                                    <segue destination="c61-M3-k6m" kind="show" identifier="transferNameAudio" id="cak-ri-ET1"/>
                                 </connections>
                             </button>
                         </subviews>

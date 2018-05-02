@@ -18,6 +18,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
+    var selectedFileName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         let fileManager = FileManager.default
         let dirPaths = fileManager.urls(for: .documentDirectory,
             in: .userDomainMask)
-        let soundFileURL = dirPaths[0].appendingPathExtension("sound.caf")
+        let soundFileURL = dirPaths[0].appendingPathExtension(selectedFileName! + ".caf")
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
              AVEncoderBitRateKey: 16,
