@@ -37,6 +37,9 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
              AVSampleRateKey: 44100.0] as [String : Any]
         let audioSession = AVAudioSession.sharedInstance()
         
+        print("path: " + dirPaths[0].absoluteString)
+        print(soundFileURL.absoluteString)
+        
         do {
             try audioSession.setCategory(
                 AVAudioSessionCategoryPlayAndRecord)
@@ -87,8 +90,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         playButton.isEnabled = true
         recordButton.isEnabled = true
         saveButton.isEnabled = true
-        
-        print(selectedFileName!)
         
         if audioRecorder?.isRecording == true {
             audioRecorder?.stop()
