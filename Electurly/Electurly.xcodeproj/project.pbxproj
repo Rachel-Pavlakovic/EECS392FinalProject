@@ -21,7 +21,6 @@
 		CC8B34AD2099078500240CF7 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34AC2099078500240CF7 /* AudioViewController.swift */; };
 		CC8B34AF2099079800240CF7 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34AE2099079800240CF7 /* VideoViewController.swift */; };
 		CC8B34B1209907AE00240CF7 /* FileSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */; };
-		CC8B34B3209907C900240CF7 /* FolderSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		CC8B34AC2099078500240CF7 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		CC8B34AE2099079800240CF7 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectViewController.swift; sourceTree = "<group>"; };
-		CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 				CC8B34AC2099078500240CF7 /* AudioViewController.swift */,
 				CC8B34AE2099079800240CF7 /* VideoViewController.swift */,
 				CC8B34B0209907AE00240CF7 /* FileSelectViewController.swift */,
-				CC8B34B2209907C900240CF7 /* FolderSelectViewController.swift */,
 				CC8B34AA2099073C00240CF7 /* RecSelectViewController.swift */,
 				CC8B349B2098F8E100240CF7 /* Assets.xcassets */,
 				CC8B349D2098F8E100240CF7 /* LaunchScreen.storyboard */,
@@ -183,7 +180,6 @@
 				CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */,
 				CC8B34A72099069F00240CF7 /* HomeViewController.swift in Sources */,
 				CC8B34AB2099073C00240CF7 /* RecSelectViewController.swift in Sources */,
-				CC8B34B3209907C900240CF7 /* FolderSelectViewController.swift in Sources */,
 				CC8B34AD2099078500240CF7 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

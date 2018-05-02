@@ -37,9 +37,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
              AVSampleRateKey: 44100.0] as [String : Any]
         let audioSession = AVAudioSession.sharedInstance()
         
-        print("path: " + dirPaths[0].absoluteString)
-        print(soundFileURL.absoluteString)
-        
         do {
             try audioSession.setCategory(
                 AVAudioSessionCategoryPlayAndRecord)
