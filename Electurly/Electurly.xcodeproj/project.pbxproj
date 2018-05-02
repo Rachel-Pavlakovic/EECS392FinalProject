@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CC3E13D42099FB4D004E3336 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3E13D32099FB4D004E3336 /* AVFoundation.framework */; };
-		CC3E13D8209A3BF4004E3336 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E13D7209A3BF4004E3336 /* PlayViewController.swift */; };
 		CC3E13DA209A3C13004E3336 /* SaveAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E13D9209A3C13004E3336 /* SaveAudioViewController.swift */; };
 		CC3E13DC209A3C2B004E3336 /* SaveVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E13DB209A3C2B004E3336 /* SaveVideoViewController.swift */; };
+		CC3E13DE209A42D9004E3336 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E13DD209A42D9004E3336 /* PlayViewController.swift */; };
 		CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B34942098F8E000240CF7 /* AppDelegate.swift */; };
 		CC8B349A2098F8E000240CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8B34982098F8E000240CF7 /* Main.storyboard */; };
 		CC8B349C2098F8E100240CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8B349B2098F8E100240CF7 /* Assets.xcassets */; };
@@ -26,9 +26,9 @@
 
 /* Begin PBXFileReference section */
 		CC3E13D32099FB4D004E3336 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		CC3E13D7209A3BF4004E3336 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayViewController.swift; path = ../PlayViewController.swift; sourceTree = "<group>"; };
 		CC3E13D9209A3C13004E3336 /* SaveAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAudioViewController.swift; sourceTree = "<group>"; };
 		CC3E13DB209A3C2B004E3336 /* SaveVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVideoViewController.swift; sourceTree = "<group>"; };
+		CC3E13DD209A42D9004E3336 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		CC8B34912098F8E000240CF7 /* Electurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electurly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8B34942098F8E000240CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8B34992098F8E000240CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				CC3E13DB209A3C2B004E3336 /* SaveVideoViewController.swift */,
-				CC3E13D7209A3BF4004E3336 /* PlayViewController.swift */,
 				CC3E13D9209A3C13004E3336 /* SaveAudioViewController.swift */,
 				CC8B34942098F8E000240CF7 /* AppDelegate.swift */,
 				CC8B34A62099069F00240CF7 /* HomeViewController.swift */,
@@ -99,6 +98,7 @@
 				CC8B349D2098F8E100240CF7 /* LaunchScreen.storyboard */,
 				CC8B34A02098F8E100240CF7 /* Info.plist */,
 				CC8B34A82099071900240CF7 /* FuncSelectViewController.swift */,
+				CC3E13DD209A42D9004E3336 /* PlayViewController.swift */,
 			);
 			path = Electurly;
 			sourceTree = "<group>";
@@ -176,9 +176,9 @@
 			files = (
 				CC3E13DA209A3C13004E3336 /* SaveAudioViewController.swift in Sources */,
 				CC8B34B1209907AE00240CF7 /* FileSelectViewController.swift in Sources */,
-				CC3E13D8209A3BF4004E3336 /* PlayViewController.swift in Sources */,
 				CC8B34A92099071900240CF7 /* FuncSelectViewController.swift in Sources */,
 				CC3E13DC209A3C2B004E3336 /* SaveVideoViewController.swift in Sources */,
+				CC3E13DE209A42D9004E3336 /* PlayViewController.swift in Sources */,
 				CC8B34AF2099079800240CF7 /* VideoViewController.swift in Sources */,
 				CC8B34952098F8E000240CF7 /* AppDelegate.swift in Sources */,
 				CC8B34A72099069F00240CF7 /* HomeViewController.swift in Sources */,
