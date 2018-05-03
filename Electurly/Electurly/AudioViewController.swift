@@ -31,7 +31,16 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
             in: .userDomainMask)
         let soundFileURL = dirPaths[0].appendingPathExtension(selectedFileName! + ".caf")
         
-        print(soundFileURL.absoluteString + "<--FROM AVC")
+        /*
+        let docDirect = dirPaths[0]
+        do {
+            let fileURLs = try fileManager.contentsOfDirectory(at: docDirect, includingPropertiesForKeys: nil)
+            print(fileURLs.count)
+        } catch {
+            print("\(error.localizedDescription)")
+        }
+        */
+
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
              AVEncoderBitRateKey: 16,
@@ -112,8 +121,5 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
                 print("audioPlayer error: \(error.localizedDescription)")
             }
         }
-    }
-    
-    @IBAction func saveAudio(_ sender: UIButton) {
     }
 }
