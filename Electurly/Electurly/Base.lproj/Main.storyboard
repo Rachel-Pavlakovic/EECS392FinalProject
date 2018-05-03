@@ -311,7 +311,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="BIr-o0-dyD"/>
+                                    <action selector="saveAudio:" destination="c61-M3-k6m" eventType="touchUpInside" id="B6p-2O-EDQ"/>
                                     <segue destination="6DJ-66-wKH" kind="show" id="osz-bj-QQ7"/>
                                 </connections>
                             </button>
@@ -406,6 +406,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KkO-uW-qRO"/>
+        <segue reference="osz-bj-QQ7"/>
     </inferredMetricsTieBreakers>
 </document>

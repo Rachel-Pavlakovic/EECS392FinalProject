@@ -27,11 +27,10 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         saveButton.isEnabled = false
         
         let fileManager = FileManager.default
-        let dirPaths = fileManager.urls(for: .documentDirectory,
+        let directoryPaths = fileManager.urls(for: .documentDirectory,
             in: .userDomainMask)
-        let soundFileURL = dirPaths[0].appendingPathExtension(selectedFileName! + ".caf")
+        let soundFileURL = directoryPaths[0].appendingPathExtension(selectedFileName! + ".caf")
         
-        print(soundFileURL.absoluteString + "<--FROM AVC")
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
              AVEncoderBitRateKey: 16,
@@ -57,11 +56,11 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         recordButton.isEnabled = true
+        saveButton.isEnabled = true
         stopButton.isEnabled = false
     }
     
@@ -73,12 +72,13 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     }
     
     func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
-        print("Audio Record Encode Error")
+        print("Audio Recorder Encode Error")
     }
     
     @IBAction func recordAudio(_ sender: UIButton) {
         if audioRecorder?.isRecording == false {
             playButton.isEnabled = false
+            saveButton.isEnabled = false
             stopButton.isEnabled = true
             audioRecorder?.record()
         }
@@ -101,6 +101,7 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         if audioRecorder?.isRecording == false {
             stopButton.isEnabled = true
             recordButton.isEnabled = false
+            saveButton.isEnabled = false
             
             do {
                 try audioPlayer = AVAudioPlayer(contentsOf:
@@ -116,4 +117,6 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
     
     @IBAction func saveAudio(_ sender: UIButton) {
     }
+    
+    
 }
