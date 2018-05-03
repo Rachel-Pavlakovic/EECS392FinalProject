@@ -10,9 +10,19 @@ import UIKit
 
 class FileSelectViewController: UITableViewController {
     
+    var audioArray = [String]()
+    var videoArray = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let fileManager = FileManager.default
+        let dirPaths = fileManager.urls(for: .documentDirectory,
+                                        in: .userDomainMask)
+        let docDirect = dirPaths[0]
+        
+        populateNameArrays(fileManager, docDirect)
         reloadTableViewContent()
     }
     
@@ -38,23 +48,10 @@ class FileSelectViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
-        let fileManager = FileManager.default
-        let dirPaths = fileManager.urls(for: .documentDirectory,
-                                        in: .userDomainMask)
-        
-        //Document directory URL.
-        let docDirect = dirPaths[0]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+    func populateNameArrays(_ fileManager: FileManager, _ docDirect: URL) {
         do {
             
             let fileURLs = try fileManager.contentsOfDirectory(at: docDirect, includingPropertiesForKeys: nil)
- 
-            var audioArray = [String]()
-            var videoArray = [String]()
             
             for url in fileURLs {
                 let str_url = url.absoluteString
@@ -68,20 +65,23 @@ class FileSelectViewController: UITableViewController {
                 }
             }
             
-            for file in audioArray {
-                cell.textLabel!.text = file
-            }
-            for file in videoArray {
-                cell.textLabel!.text = file
-            }
-            
-            print("LENGTH OF AUDIO ARRAY: " + String(audioArray.count))
-            
-            
-            print("LENGTH OF VIDEO ARRAY: " + String(videoArray.count))
-
         } catch {
             print("\(error.localizedDescription)")
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        
+        for file in audioArray {
+            cell.textLabel!.text = file
+        }
+        for file in videoArray {
+            cell.textLabel!.text = file
         }
         
         return cell
