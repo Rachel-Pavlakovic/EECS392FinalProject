@@ -10,8 +10,7 @@ import UIKit
 
 class FileSelectViewController: UITableViewController {
     
-    var audioArray = [URL]()
-    var videoArray = [URL]()
+    var urlArray = [URL]()
     var label = String()
     
     override func viewDidLoad() {
@@ -49,7 +48,7 @@ class FileSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return audioArray.count + videoArray.count
+        return urlArray.count
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,8 +61,7 @@ class FileSelectViewController: UITableViewController {
             let str_url = url.absoluteString
             
             if str_url.count > 5 {
-                audioArray = fileURLs.filter{$0.pathExtension == "caf"}
-                videoArray = fileURLs.filter{$0.pathExtension == "mp4"}
+                urlArray = fileURLs.filter{$0.pathExtension == "caf" || $0.pathExtension == "mp4"}
             }
         }
     }
@@ -72,14 +70,8 @@ class FileSelectViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let url = audioArray[indexPath.row]
+        let url = urlArray[indexPath.row]
         cell.textLabel!.text = getFileName(url.absoluteString)
-        
-        /*
-        for file in videoArray {
-            cell.textLabel!.text = getFileName(file.absoluteString)
-        }
-        */
         
         return cell
     }
@@ -99,11 +91,11 @@ class FileSelectViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            self.label = audioArray[indexPath.row].absoluteString
+            self.label = urlArray[indexPath.row].absoluteString
         }
         if segue.identifier == "playAudio" {
             let controller = segue.destination as! PlayViewController
-            controller.audioArray = self.audioArray
+            controller.urlArray = self.urlArray
             controller.currentCell = label
         }
     }

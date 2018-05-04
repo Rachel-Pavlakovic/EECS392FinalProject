@@ -11,8 +11,7 @@ import AVFoundation
 
 class PlayViewController: UIViewController, AVAudioPlayerDelegate {
     
-    var audioArray = [URL]()
-    var videoArray = [URL]()
+    var urlArray = [URL]()
     var currentCell = String()
     var audioPlayer: AVAudioPlayer?
 
