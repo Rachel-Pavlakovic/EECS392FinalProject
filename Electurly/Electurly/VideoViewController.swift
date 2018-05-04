@@ -3,12 +3,8 @@
 //  Electurly
 //
 //
-//
-//  Created with help from the code at this URL:
-//  https://stackoverflow.com/questions/41697568/capturing-video-with-avfoundation
-//
-//  Created by Rachel Pavlakovic on 5/1/18.
-//  Copyright © 2018 Rachel Pavlakovic. All rights reserved.
+//  Created by Rachel Pavlakovic and Jack LaRue on 5/2/18.
+//  Copyright © 2018 Rachel Pavlakovic and Jack LaRue. All rights reserved.
 //
 
 import UIKit
@@ -30,7 +26,6 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Prepares the video URL.
         let fileManager = FileManager.default
         let dirPaths = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
@@ -197,7 +192,6 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
