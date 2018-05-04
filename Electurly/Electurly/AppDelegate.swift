@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Electurly
 //
-//  Created by Rachel Pavlakovic on 5/1/18.
-//  Copyright © 2018 Rachel Pavlakovic. All rights reserved.
+//  Created by Rachel Pavlakovic and Jack LaRue on 5/2/18.
+//  Copyright © 2018 Rachel Pavlakovic and Jack LaRue. All rights reserved.
 //
 
 import UIKit
