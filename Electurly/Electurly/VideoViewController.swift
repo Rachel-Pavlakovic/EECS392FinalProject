@@ -53,7 +53,7 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(VideoViewController.beginRecording))
         button.addGestureRecognizer(recognizer)
         button.backgroundColor = UIColor.blue
-        button.frame = CGRect(x: screenWidth/2, y: screenHeight - 100, width: 50, height: 50)
+        button.frame = CGRect(x: screenWidth/2 - 35, y: screenHeight - 150, width: 50, height: 50)
         cameraView.addSubview(button)
     }
     
@@ -161,35 +161,26 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
         
         if (!output.isRecording) {
             
-            /*
-            let video = output.connection(with: AVMediaType.video)
+            let connection = output.connection(with: AVMediaType.video)
+
             
-            
-            if(video?.isVideoOrientationSupported)! {
-                video?.videoOrientation = fixedOrientation
+            //This code will reach the startRecording function if a connection is found.
+            //Since we are not attached to an iPhone, this will not record anything.
+            guard let activeConn = connection?.isActive else {
+                
+                let alert = UIAlertController(title: "Camera Not Found", message: "Could not connect to a camera.", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alert.addAction(cancelAction)
+                present(alert, animated: true, completion: nil)
+                
+                return
+                
             }
             
-            if(video?.isVideoStabilizationSupported)! {
-                video?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
+            if activeConn {
+                //Begins a recording session.
+                output.startRecording(to: vidURL, recordingDelegate: self)
             }
-            
-            let camera = currInput.device
-            if(camera.isSmoothAutoFocusEnabled) {
-                do {
-                    
-                    try camera.lockForConfiguration()
-                    camera.isSmoothAutoFocusEnabled = false
-                    camera.unlockForConfiguration()
-                    
-                }
-                catch {
-                    print("\(error.localizedDescription)")
-                }
-            }
-            */
-            
-            //Begins a recording session.
-            output.startRecording(to: vidURL, recordingDelegate: self)
             
         } else {
             finishRecording()
