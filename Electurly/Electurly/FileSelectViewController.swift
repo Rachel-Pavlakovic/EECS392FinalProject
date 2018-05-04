@@ -12,7 +12,7 @@ class FileSelectViewController: UITableViewController {
     
     var audioArray = [URL]()
     var videoArray = [URL]()
-    
+    var label = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,6 @@ class FileSelectViewController: UITableViewController {
             let fileURLs = try fileManager.contentsOfDirectory(at:url! as URL, includingPropertiesForKeys: nil)
             // process files
             populateNameArrays(fileURLs, docDirect)
-            print(fileURLs.count)
-            print(audioArray.count)
         } catch {
             print("Error while enumerating files \(docDirect.path): \(error.localizedDescription)")
         }
@@ -38,8 +36,7 @@ class FileSelectViewController: UITableViewController {
         reloadTableViewContent()
     }
     
-    func reloadTableViewContent()
-    {
+    func reloadTableViewContent() {
         self.tableView.reloadData()
     }
     
@@ -65,15 +62,8 @@ class FileSelectViewController: UITableViewController {
             let str_url = url.absoluteString
             
             if str_url.count > 5 {
-                /*
-                if str_url.suffix(5) == ".caf/" {
-                    audioArray.append(getFileName(str_url))
-                } else if str_url.suffix(5) == ".mp4/" {
-                    videoArray.append(getFileName(str_url))
-                }
-                */
-                
-                audioArray = fileURLs.filter{$0.pathExtension == "caf" }
+                audioArray = fileURLs.filter{$0.pathExtension == "caf"}
+                videoArray = fileURLs.filter{$0.pathExtension == "mp4"}
             }
         }
     }
@@ -82,25 +72,39 @@ class FileSelectViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        for file in audioArray {
-            cell.textLabel!.text = file.absoluteString
-        }
+        let url = audioArray[indexPath.row]
+        cell.textLabel!.text = getFileName(url.absoluteString)
+        
+        /*
         for file in videoArray {
-            cell.textLabel!.text = file.absoluteString
+            cell.textLabel!.text = getFileName(file.absoluteString)
         }
+        */
         
         return cell
     }
     
     func getFileName(_ url : String) -> String {
-        var fileName = ""
+        var name = ""
+        
         for char in url {
-            if char != "/" {
-                fileName.append(char)
+            if char == "/" {
+                name = ""
             } else {
-                fileName = ""
+                name.append(char)
             }
         }
-        return fileName
+        return name
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            self.label = audioArray[indexPath.row].absoluteString
+        }
+        if segue.identifier == "playAudio" {
+            let controller = segue.destination as! PlayViewController
+            controller.audioArray = self.audioArray
+            controller.currentCell = label
+        }
     }
 }
