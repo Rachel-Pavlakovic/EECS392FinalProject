@@ -10,6 +10,9 @@ import UIKit
 
 class SaveVideoViewController: UIViewController {
 
+    @IBOutlet weak var textInput: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,21 @@ class SaveVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "vidnametorecordsegue" {
+            let controller = segue.destination as! VideoViewController
+            
+            if textInput.hasText {
+                controller.vidName = textInput.text
+            } else {
+                let date = Date()
+                let calender = Calendar.current
+                let day = calender.component(.day, from: date)
+                let month = calender.component(.month, from: date)
+                let year = calender.component(.year, from: date)
+                controller.vidName = String(month) + "_" + String(day) + "_" + String(year)
+            }
+        }
     }
-    */
 
 }
